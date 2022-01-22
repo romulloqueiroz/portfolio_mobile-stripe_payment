@@ -30,7 +30,6 @@ export default {
     },
     extra: {
       publishableKey: 'pk_test_51KKY5eGY1jsRwDkYN2m2gMbXQySLZHi7tCv7BceC6HEb8IHNsUahLGx8M3t4HrmXNwv3gpEfuUu5go1gFRQWUlOC00REVu1Sh2',
-      secretKey: 'sk_test_51KKY5eGY1jsRwDkYXnlQDliJzYHMkfXoWlzjY8c5IgMvibXiIcZJcjPaP87j0sefB5Yq2vzkRlPY6119o8iwvQbB00YIYAbl5p',
       apiURL: 'http://localhost:3000'
     }
   }

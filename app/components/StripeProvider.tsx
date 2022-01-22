@@ -55,7 +55,7 @@ const Stripe = () => {
       />
       <CardField
         postalCodeEnabled={true}
-        placeholder={{ number: 'XXXX XXXX XXXX XXXX' }}
+        placeholder={{ number: '4242 4242 4242 4242' }}
         cardStyle={styles.card}
         style={styles.cardContainer}
         onCardChange={cardDetails => setCardDetails(cardDetails)}
