@@ -1,3 +1,4 @@
+import { StatusBar } from 'expo-status-bar'
 import { StripeProvider as _StripeProvider } from '@stripe/stripe-react-native'
 import type { Props as StripeProviderProps } from '@stripe/stripe-react-native/lib/typescript/src/components/StripeProvider'
 const StripeProvider = _StripeProvider as React.FC<StripeProviderProps>
@@ -9,6 +10,7 @@ const App = () => (
     publishableKey={PUBLISHABLE_KEY}
   >
     <Stripe />
+    <StatusBar style='auto' />
   </StripeProvider>
 )
 

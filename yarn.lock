@@ -1577,6 +1577,13 @@
     "@types/mime" "^1"
     "@types/node" "*"
 
+"@types/stripe@^8.0.417":
+  version "8.0.417"
+  resolved "https://registry.yarnpkg.com/@types/stripe/-/stripe-8.0.417.tgz#b651677a9fc33be8ce8fd5bceadd7ca077214244"
+  integrity sha512-PTuqskh9YKNENnOHGVJBm4sM0zE8B1jZw1JIskuGAPkMB+OH236QeN8scclhYGPA4nG6zTtPXgwpXdp+HPDTVw==
+  dependencies:
+    stripe "*"
+
 "@types/yargs-parser@*":
   version "20.2.1"
   resolved "https://registry.yarnpkg.com/@types/yargs-parser/-/yargs-parser-20.2.1.tgz#3b9ce2489919d9e4fea439b76916abc34b2df129"
@@ -5671,7 +5678,7 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
-stripe@^8.199.0:
+stripe@*, stripe@^8.199.0:
   version "8.199.0"
   resolved "https://registry.yarnpkg.com/stripe/-/stripe-8.199.0.tgz#dcd109f16ff0c33da638a0d154c966d0f20c73d1"
   integrity sha512-Bc5Zfp6eOOCdde9x5NPrAczeGSKuNwemzjsfGJXWtpbUfQXgJujzTGgkhx2YuzamqakDYJkTgf9w7Ry2uY8QNA==
