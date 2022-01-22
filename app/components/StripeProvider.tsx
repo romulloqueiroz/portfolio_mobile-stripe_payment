@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { StyleSheet, TextInput, View, Button } from 'react-native'
 import { CardField, CardFieldInput, useConfirmPayment } from '@stripe/stripe-react-native'
-const API_URL = 'http://localhost:3000'
+import { API_URL } from '../utils/constants'
 
 const Stripe = () => {
   const [email, setEmail] = useState('')
@@ -13,6 +13,8 @@ const Stripe = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' }
     })
+    const { clientSecret, error } = await response.json()
+    return { clientSecret, error }
   }
 
   const handlePayPress = async () => {
@@ -21,6 +23,23 @@ const Stripe = () => {
       return
     }
     const billingDetails = { email }
+    try {
+      const { clientSecret, error } = await fetchPayment()
+      if (error) {
+        alert(error)
+        return
+      } else {
+        const { paymentIntent, error } = await confirmPayment(clientSecret, { type: 'Card', billingDetails})
+        if (error) {
+          alert(`Error confirming payment: ${error}`)
+          return
+        } else if (paymentIntent) {
+          alert('Payment confirmed!')
+        }
+      }
+    } catch (error: unknown) {
+      alert(`Error: ${error}`)
+    }
   }
 
   return (
