@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react'
 import { StyleSheet, TextInput, View, Button } from 'react-native'
 import { CardField, CardFieldInput, useConfirmPayment } from '@stripe/stripe-react-native'
